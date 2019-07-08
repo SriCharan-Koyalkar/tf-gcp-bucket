@@ -6,9 +6,6 @@ Supports following:
 - Deleting Bucket (teardowns)
 - Authoritatively manages roles at the bucket level
 
-## Prerequisite
-This module uses docker to flatten IAM permissions passed down to module. Ensure that you have docker installed as it uses [terraform-flatten](https://hub.docker.com/r/muvaki/terraform-flatten) image to flatten the IAM Map. Information about the image can be found [here](https://github.com/muvaki/terraform-flatten)
-
 ## Usage
 Example folder covers how to Provision a bucket and set IAM at the bucket level. IAM permissions are authorative and will cause confliect if you try to modify roles passed down to the module in any other form. Most basic config:
 
@@ -78,10 +75,9 @@ IAM input should be passed as roles (key) with list of members as a list value. 
 ## Docs:
 
 module reference docs: 
-- terraform.io (v0.11.11)
+- terraform.io (v0.12.3)
 - GCP [Bucket](https://cloud.google.com/storage/docs/json_api/v1/buckets)
 - GCP [IAM](https://cloud.google.com/iam/)
-- Muvaki [Terraform Flatten](https://github.com/muvaki/terraform-flatten)
 
 ### LICENSE
 
